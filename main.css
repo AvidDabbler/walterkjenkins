@@ -109,12 +109,10 @@ h1{
     height: 100%;
     display: inline-block;
     position: relative;
-    font-size: 1px;
     color: #ebf2fa;
     text-align: center;
-    padding-bottom: 70px;
-    margin-top:-5px;
-    
+    padding-bottom: 50px;
+    font-size:50px;
 }
 #hr-left{
     padding:0;
@@ -122,8 +120,7 @@ h1{
     display: inline-block;
     position: relative;
     float: left;
-    width: 40%;
-    padding-top: 10px;
+    width: 45%;
 }
 #hr-right{
     padding:0;
@@ -131,8 +128,7 @@ h1{
     display: inline-block;
     position: relative;
     float: right;
-    width: 40%;
-    padding-top: 10px;
+    width: 45%;
     size: 3px;
 }
 
