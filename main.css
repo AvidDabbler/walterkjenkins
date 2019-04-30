@@ -1,0 +1,169 @@
+/* 
+***************FONTS****************
+    font-family: 'Permanent Marker', cursive;
+
+    font-family: 'Rajdhani', sans-serif;
+ */
+
+
+ /* 
+ *************COLORS****************
+ Light Blue: 427aa1
+ White: ebf2fa
+ Medium Blue: 1d3461
+ Orange: f06543
+ Dark Blue/Black: 0a122a
+ 
+ */
+
+ /* CLASSES */
+.cursive{
+    font-family: 'Permanent Marker', cursive;
+}
+.cursive a{
+}
+.text{
+    font-family: 'Rajdhani', sans-serif;
+    text-decoration: none;
+}
+.para-box{
+    font-family: 'Rajdhani', sans-serif;
+    text-decoration: none;
+
+}
+
+
+/* ELEMENTS */
+body,html{
+    margin:0px;
+    padding:0px;
+    background-color: #0a122a;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+h1{
+    padding: 0;
+    margin: 0;
+}
+
+
+/* ID'S */
+
+/* NAVBAR */
+
+
+#navbar{
+    margin:0px;
+    padding: 0px;
+    display: block;
+    width:100%;
+    height: 100%;
+}
+#navbar ul{
+    list-style-type: none;
+    padding-right: 3%;
+}
+#navbar li{
+    float: right;
+    padding-top: 30px;
+    padding-left: 6%;
+    font-size: 15px;
+}
+#navbar a{
+    text-decoration: none;
+    color: #f06543;
+
+}
+
+/* TITLE */
+#top-bar{
+    margin:0px;
+    padding:0px;
+    width: 100%;
+    display: inline-flex;
+}
+#title{
+    width: 110%;
+    float: left;
+    font-size: 130px;
+    color: #f06543;   
+}
+
+#heading{
+    padding-top: 12%;
+    padding-left: 2%;
+    display: inline-block;
+    width:100%;
+    float: left;
+
+}
+#sub-heading{
+    display: inline-block;
+    padding-left: 5%;
+    margin-bottom:17%;
+    width:70%;
+    float: left;
+}
+#arrow{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    position: relative;
+    font-size: 1px;
+    color: #ebf2fa;
+    text-align: center;
+    padding-bottom: 70px;
+    margin-top:-5px;
+    
+}
+#hr-left{
+    padding:0;
+    margin: 0;
+    display: inline-block;
+    position: relative;
+    float: left;
+    width: 40%;
+    padding-top: 10px;
+}
+#hr-right{
+    padding:0;
+    margin: 0;
+    display: inline-block;
+    position: relative;
+    float: right;
+    width: 40%;
+    padding-top: 10px;
+    size: 3px;
+}
+
+#hr-left hr, #hr-right hr{
+    width: 90%;
+    color:#427aa1;
+
+}
+#about{
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    box-align: center;
+    background-color: #ebf2fa;
+    padding-top: 30px;
+    text-align: center;
+}
+#about h1{
+    color: #427aa1;   
+    font-size: 75px;
+}
+#about-box{
+    padding-left: 15%;
+    padding-right:15%;
+    width:70%;
+    height: 90px;
+    position: relative;
+    z-index: 999;
+}
+
+
+
+
+
