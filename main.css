@@ -36,6 +36,9 @@
     font-family: 'Rajdhani', sans-serif;
     text-decoration: none;
 }
+.para-box p{
+    font-size:24px;
+}
 .content{
     font-family: 'Montserrat', sans-serif;
 }
