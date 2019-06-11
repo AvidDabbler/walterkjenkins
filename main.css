@@ -129,6 +129,10 @@ h2{
     width:70%;
     float: left;
 }
+
+
+
+/* TRANSITION */
 #arrow{
     width: 100%;
     margin-top: 1%;
@@ -160,25 +164,93 @@ h2{
     width: 90%;
     color:#427aa1;
 }
+
+
+
+
+/* ABOUT SECTION */
 #about-box{
     width:70%;
     display: inline-block;
     position: relative;
     margin-bottom: 4%;
 }
+
+
+/* WORK SECTION */
 #work{
     background-color: #1d3461;
 }
+
+
+/* SOFTWARE FAMILIARITY */
 #companies-container{
     width:100%;
+    position: relative;
+    display: inline-block;
 }
-.square{
+.photo-container-square {
+    position: relative;
+    display: inline-block;
     padding: 2%;
-    width: 15%;
-    height: 15%;
+    width: 10%;
+    height: 10%;
+    min-width: 200px;
+    max-height: 200px;
+    margin-top: 30px;
 }
-.rect{
+.photo-container-rect{
+    position: relative;
+    display: inline-block;
     padding:2%;
     width: 30%;
     height: 30%;
+    min-width: 400px;
+    margin-top: 30px;
+}
+.image {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+}
+.square img{
+    height: 100%;
+    width: auto;
+}
+.rect img{
+    height: 100%;
+    width: auto;
+}
+  
+.overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008CBA;
+  }
+  
+.photo-container-square:hover .overlay{
+    opacity: 1;
+  }
+
+.photo-container-rect:hover .overlay {
+    opacity: 1;
+}
+
+.overlay-text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
