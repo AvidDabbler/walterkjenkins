@@ -50,24 +50,21 @@
 .white{
     background-color: white;
 }
-h1{
-    margin-top:5%;
-    color: #427aa1;   
-    font-size: 75px;
-    text-shadow: 5px 1px #0001;
-}
+
 .blue{
     background-color: #1d3461;
 }
 
 .blue h1{
-    margin-top:5%;
     color: #427aa1;   
     font-size: 75px;
     text-shadow: 5px 1px #0001;
 }
 .blue p{
     color: #ebf2fa;
+}
+.port{
+
 }
 /* ELEMENTS */
 body, html {
@@ -80,6 +77,9 @@ body, html {
     
 }
 h1{
+    color: #427aa1;   
+    font-size: 75px;
+    text-shadow: 5px 1px #0001;
     padding: 0;
     margin: 0;
 }
@@ -131,6 +131,7 @@ h2{
     padding-left: 2%;
     width:97%;
     float: left;
+    box-shadow: #0a122a
 }
 #sub-heading{
     padding-left: 5%;
@@ -186,10 +187,8 @@ h2{
 
 /* WORK SECTION */
 #work{
-    padding: 0;
     background-color: #1d3461;
 }
-
 
 /* SOFTWARE FAMILIARITY */
 #companies-container{
@@ -261,4 +260,43 @@ h2{
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
+}
+.portfolio-container {
+    margin:0;
+    padding:0;
+    width: 90%;
+    height: 5%;
+}
+
+
+
+/* START OF PORTFOLIO */
+
+#portfolio h1{
+    padding-bottom: 30px;
+}
+.left-card, .right-card{ 
+    width:30%;
+}
+.left-card img, .right-card img{
+    width:100%;
+    border: 5px solid #427aa1;
+    border-radius: 10px;
+}
+.left-para img, .left-card img, .left-card, .left-para{
+    float: left;
+}
+.right-para img, .right-card img, .right-para, .right-card{
+    float: right;
+}
+.right-para, .left-para{
+    text-align: center;
+    width:65%;
+    height: 100%;
+    padding:0;
+    margin:0;
+}
+.right-para h2, .left-para h2{
+    margin:0;
+    color: #ebf2fa;
 }
