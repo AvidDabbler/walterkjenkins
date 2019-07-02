@@ -1,29 +1,50 @@
+const i = 0;
+class repoConstr {
+    constructor(repo, i){
+        this.id = i++;
+        this.repo = repo;
+        this.url = `https://api.github.com/repos/AvidDabbler/${repo}`;
+        this.thumbnail = `https://raw.githubusercontent.com/AvidDabbler/${repo}/thumbnail.png`;
+        this.about = this.url['description'];
+        }
+}
+
+const repos = [
+    new repoConstr(`walterkjenkins`),
+    new repoConstr(`censusViz`),
+    new repoConstr(`canihazchix`)
+];
+
+console.log(repos);
+console.log(repos.length);
+
+/* 
 const repos = [
     "walterkjenkins",
     "censusViz",
     "canihazchix"
-];
+]; */
 
-
+/* 
 const datas = function (name){
-    d3.json(`https://api.github.com/repos/AvidDabbler/${name}`).then(function(name){
-        const urlGen = `https://api.github.com/repos/AvidDabbler/${name}`;
-        const thumbnailGen = `https://raw.githubusercontent.com/AvidDabbler/${name}/thumbnail.PNG`;
-        const aboutGen = datas['description']; // github api repo object
-        
-        return{
-            url: urlGen,
-            thumbnail: thumbnailGen,
-            about: aboutGen,
-    
-        }
-
+    d3.json(`https://api.github.com/repos/AvidDabbler/${name}`).then(function(data){
         // console.log(data);
         // console.log(data['full_name']);
         // console.log(attGen(name));
-        })
-  
-    }
+
+        const attGen = function(name){  
+            const urlGen = `https://api.github.com/repos/AvidDabbler/${name}`;
+            const thumbnailGen = `https://raw.githubusercontent.com/AvidDabbler/${name}/thumbnail.png`;
+            const aboutGen = datas['description']; // github api repo object
+            
+            return{
+                url: urlGen,
+                thumbnail: thumbnailGen,
+                about: aboutGen
+        
+            }
+        }
+    }); */
 
 // class Attributes{
 //     constructor(name, url, thumbnail, about, tags){
@@ -36,8 +57,9 @@ const datas = function (name){
 
 // };
 
-
-console.log(datas('CensusViz')('CensusViz'));
+//}
+console.log(datas.
+    attGen('CensusViz'));
 
 
 
@@ -49,9 +71,16 @@ console.log(datas('CensusViz')('CensusViz'));
 
 
 
-// const data = d3.json(`https://api.github.com/repos/AvidDabbler/${name}`).then(function(data){
-//     console.log(data);
-//     console.log(data['full_name']);
-
-// });
+const yoyo = function(name){ 
+  
+    const makeUrl = `https://api.github.com/repos/AvidDabbler/${name}`
+     console.log(makeUrl);
+     
+     const partone = fetch(makeUrl).then(response=> response.json());
+       
+       partone.then(myJson => console.log(JSON.stringify(myJson)));
+   
+   }
+   
+   yoyo("walterkjenkins");
 
