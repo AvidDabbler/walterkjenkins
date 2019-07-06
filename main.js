@@ -15,7 +15,7 @@ class repoConstr {
         this.repo = repo;
         this.apiUrl = `https://api.github.com/repos/AvidDabbler/${repo}`;
         this.gitUrl = `https://github.com/AvidDabbler/${repo}`;
-        this.thumbnail = `https://raw.githubusercontent.com/AvidDabbler/${repo}/thumbnail.PNG`;
+        this.thumbnail = `https://raw.githubusercontent.com/AvidDabbler/${repo}/master/thumbnail.PNG`;
         this.description = description(this.apiUrl); 
     }
 }
