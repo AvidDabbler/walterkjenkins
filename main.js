@@ -1,30 +1,29 @@
+const description = (link)=>{
+    const fetchedData = fetch(link).then(response=>
+        response.json()).then(myJson=> ({
+            data: myJson,
+        })
+        ).then(res =>{
+            return res.data.description
+        })
+    return fetchedData;
+};
+
+
 class repoConstr {
     constructor(repo){
         this.repo = repo;
         this.apiUrl = `https://api.github.com/repos/AvidDabbler/${repo}`;
         this.gitUrl = `https://github.com/AvidDabbler/${repo}`;
         this.thumbnail = `https://raw.githubusercontent.com/AvidDabbler/${repo}/thumbnail.PNG`;
-        this.about = () => { 
-            const partone = fetch(u).then(response=> response.json());
-            partone(this.url);
-            const data = partone.then(myJson =>JSON.stringify(myJson));
-            return data;
-           }
+        this.description = description(this.apiUrl); 
     }
 }
 
 const repos = [
     new repoConstr(`walterkjenkins`),
     new repoConstr(`censusViz`),
-    new repoConstr(`canihazchix`)
+    new repoConstr(`canihazchix`),
+    new repoConstr(`dlm-soundboard`)
 ];
-
-console.log(repos);
-
-
-const getdata = function() { 
-    const partone = fetch(`https://api.github.com/repos/AvidDabbler/walterkjenkins`).then(response=> response.json());
-    partone.then(myJson =>JSON.stringify(myJson));
-}
-
-console.log(getdata);
+    console.log(repos);
