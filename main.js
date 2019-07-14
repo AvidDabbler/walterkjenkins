@@ -36,7 +36,7 @@ const finalArr= [];
 const reposFunction = () => {
 
     setupArr.forEach(async(el)=>{
-        const getDataObj = await getData(el[1], el[1]);
+        const getDataObj = await getData(el[0], el[1]);
         finalArr.push(getDataObj);
     });
     return finalArr;
