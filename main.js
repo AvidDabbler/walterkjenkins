@@ -20,9 +20,6 @@ const getData = async(id, repo)=>{
             descr: await description,
             homepage: `https://aviddabbler.github.io/${repo}/`,
             tech: await technology
-
-/*             about: description[0],
-            languages: description[1] */
             }
         };
 
