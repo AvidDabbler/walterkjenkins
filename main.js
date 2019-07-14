@@ -1,5 +1,7 @@
-const getData = async(id, repo)=>{
-    const link = `https://api.github.com/repos/AvidDabbler/${repo}`;
+const user = `AvidDabbler`;
+
+const getData = async(id, repo, usr = user)=>{
+    const link = `https://api.github.com/repos/${usr}/${repo}`;
     const fetchedData = fetch(link).then( response=> 
         response.json()).then(myJson=> ({
             data:myJson
@@ -15,15 +17,13 @@ const getData = async(id, repo)=>{
     return {
             id: id,
             repo: repo,
-            gitUrl: `https://github.com/AvidDabbler/${repo}`,
-            thumbnail: `https://raw.githubusercontent.com/AvidDabbler/${repo}/master/thumbnail.PNG`,
+            gitUrl: `https://github.com/${usr}/${repo}`,
+            thumbnail: `https://raw.githubusercontent.com/${usr}/${repo}/master/thumbnail.PNG`,
             descr: await description,
-            homepage: `https://aviddabbler.github.io/${repo}/`,
+            homepage: `https://${usr}.github.io/${repo}/`,
             tech: await technology
             }
         };
-
-
 
 /* DEFINED REPOS TO DISPLAY */
 const setupArr = [
