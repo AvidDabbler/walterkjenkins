@@ -1,29 +1,69 @@
-const description = (link)=>{
+const description = async (link)=>{
     const fetchedData = fetch(link).then(response=>
         response.json()).then(myJson=> ({
-            data: myJson,
+            data:myJson
         })
         ).then(res =>{
             return res.data.description
-        })
-    return fetchedData;
+        });
+    return fetchedData
 };
 
 
 class repoConstr {
-    constructor(repo){
+    constructor(id, repo){
+        this.id = id;
         this.repo = repo;
-        this.apiUrl = `https://api.github.com/repos/AvidDabbler/${repo}`;
+        const apiurldata = await fetch(`https://api.github.com/repos/AvidDabbler/${repo}`);
+        this.apiUrl = apiurldata;
         this.gitUrl = `https://github.com/AvidDabbler/${repo}`;
         this.thumbnail = `https://raw.githubusercontent.com/AvidDabbler/${repo}/master/thumbnail.PNG`;
-        this.description = description(this.apiUrl); 
+        this.description = description(this.apiUrl);
     }
+/*     description(){
+        fetch(this.apiUrl).then(response=>
+            response.json()).then(myJson=> ({
+                data:myJson
+            })
+            ).then(res =>{
+                const data = res.data.description;
+            });
+        return data;
+    } */
+
 }
 
 const repos = [
-    new repoConstr(`walterkjenkins`),
-    new repoConstr(`censusViz`),
-    new repoConstr(`canihazchix`),
-    new repoConstr(`dlm-soundboard`)
+    new repoConstr(1, `walterkjenkins`),
+    new repoConstr(2, `censusViz`),
+    new repoConstr(3, `backyard-chickens`),
+    new repoConstr(4, `dlm-soundboard`)
 ];
-    console.log(repos);
+
+const reposFunction = async () => {
+    const setupArr = [
+        [1, `walterkjenkins`],
+        [2, `censusViz`],
+        [3, `backyard-chickens`],
+        [4, `dlm-soundboard`]
+    ];
+    setupArr.forEach
+    function getData(){
+
+    }
+};
+
+const test = new repoConstr(1, 'walterkjenkins');
+
+
+//this works but runs before test.description() can run
+console.log(test);
+
+
+
+
+/* const renderPortfolio = (()=>{
+    data.map(data.repo);
+});
+
+console.log(renderPortfolio(data)); */

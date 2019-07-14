@@ -271,32 +271,32 @@ h2{
 
 
 /* START OF PORTFOLIO */
+.portfolio-container{
+    width: 100%;
+    margin:5% 5% 5% 0;
+}
+.thumbnail{ 
+    width:35%;
+    display: inline-block;
 
-#portfolio h1{
+}
+.thumbnail img{
+    width: 100%;
+}
+.paragraph{
+    text-align: center;
+    width:55%;
+    display: inline-block;
+    vertical-align: top;
+}
+.paragraph h1{
     padding-bottom: 30px;
 }
-.left-card, .right-card{ 
-    width:30%;
-}
-.left-card img, .right-card img{
-    width:100%;
-    border: 5px solid #427aa1;
-    border-radius: 10px;
-}
-.left-para img, .left-card img, .left-card, .left-para{
+.thumbnail img{
     float: left;
 }
-.right-para img, .right-card img, .right-para, .right-card{
-    float: right;
-}
-.right-para, .left-para{
-    text-align: center;
-    width:65%;
-    height: 100%;
-    padding:0;
+.paragraph h2{
     margin:0;
-}
-.right-para h2, .left-para h2{
-    margin:0;
+    font-size: 30px;
     color: #ebf2fa;
 }
