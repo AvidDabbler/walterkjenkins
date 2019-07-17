@@ -1,8 +1,9 @@
-const user = `AvidDabbler`;
+const user = `AvidDabbler`; /* ENTER IN GITHUB USERNAME */
+const split = ` || `;
 
-const getData = async(id, repo, usr = user)=>{
-    const link = `https://api.github.com/repos/${usr}/${repo}`;
-    const fetchedData = fetch(link).then( response=> 
+const getData = async(repo, usr = user, splt = split)=>{
+    const gitLink = `https://api.github.com/repos/${usr}/${repo}`;
+    const fetchedData = fetch(gitLink).then( response=> 
         response.json()).then(myJson=> ({
             data:myJson
         })
@@ -10,26 +11,44 @@ const getData = async(id, repo, usr = user)=>{
             return res.data.description
         });
     const object = await fetchedData;
-    const objArr = object.split(' || ');
-    const description = objArr[0];
-    const technology = objArr[1].split(', ');
+    const objArr = object.split(splt);
+
+    const statLink = `https://api.github.com/repos/${user}/${repo}/stats/participation`;
+    const statData = fetch(statLink).then( response=> 
+        response.json()).then(myJson=> ({
+            data:myJson
+        })
+        ).then(async res =>{
+            return res.data.all
+        });
+
+    /* FINAL PRODUCTS */
+    const formTitle = objArr[0];
+    const description = objArr[1];
+    const technology = objArr[2].split(', ');
+    const count = finalArr.length;
+    const particData = await statData;
+
 
     return {
-            id: id,
+            id: count,
             repo: repo,
             gitUrl: `https://github.com/${usr}/${repo}`,
             thumbnail: `https://raw.githubusercontent.com/${usr}/${repo}/master/thumbnail.PNG`,
-            descr: await description,
             homepage: `https://${usr}.github.io/${repo}/`,
-            tech: await technology
+            apiUrl: gitLink,
+            title: await formTitle,
+            descr: await description,
+            tech: await technology,
+            stats: await particData
             }
         };
 
 /* DEFINED REPOS TO DISPLAY */
 const setupArr = [
-    [0, `censusViz`],
-    [1, `backyard-chickens`],
-    [2, `dlm-soundboard`]
+    [`censusViz`],
+    [`backyard-chickens`],
+    [`dlm-soundboard`]
 ];
 const finalArr= [];
 
