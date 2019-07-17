@@ -1,5 +1,7 @@
 const user = `AvidDabbler`; /* ENTER IN GITHUB USERNAME */
 const split = ` || `;
+const finalArr= [];
+
 
 const getData = async(repo, usr = user, splt = split)=>{
     const gitLink = `https://api.github.com/repos/${usr}/${repo}`;
@@ -50,12 +52,10 @@ const setupArr = [
     [`backyard-chickens`],
     [`dlm-soundboard`]
 ];
-const finalArr= [];
 
 const reposFunction = () => {
-
     setupArr.forEach(async(el)=>{
-        const getDataObj = await getData(el[0], el[1]);
+        const getDataObj = await getData(el[0], el[1], el[2], el[3]);
         finalArr.push(getDataObj);
     });
     return finalArr;
