@@ -1,8 +1,3 @@
-/**
- * TODO: GET PORTRENDER() FOR LOOP TO RETURN SOMETHING (ASYNC ERROR?)
- * TODO: ADD IN THE FOLLOWING -> document.getElementById("portfolio-content").innerHTML+= `<div id="project-${i}" class="portfolio-container content"><div class="thumbnail"><a href="${data[i].homepage}" target="_blank"><img class="" src="${data[i].thumbnail}" alt="${data[i].title} application photo"></img></a></div> <div class="paragraph"><h2>${data[i].title}</h2><p>${data[i].descr}</p></div>`
- */
-
 
 //! DEFINING DEFAULTS
 
@@ -77,11 +72,15 @@ const reposFunction = async () => {
 // * GITHUB DATA RENDERING
 const portfGen= async()=>{ 
     await reposFunction();
+    
     const data = await finalArr;
     for(let i=0; i < data.length; i++){
-        let descr = await data[i];
-        console.log(descr); //! FOR LOOP DOES NOT RETURN ANYTHING
-        document.getElementById("portfolio-content").innerHTML+= `<div id="project-${i}" class="portfolio-container content"><div class="thumbnail"><a href="${data[i].homepage}" target="_blank"><img class="" src="${data[i].thumbnail}" alt="${data[i].title} application photo"></img></a></div> <div class="paragraph"><h2>${data[i].title}</h2><p>${data[i].descr}</p></div>`
+        if(i % 2 == 0){
+            document.getElementById("portfolio-content").innerHTML+= `<div id="project-${i}" class="portfolio-container content"><div class="thumbnail"><a href="${data[i].homepage}" target="_blank"><img class="" src="${data[i].thumbnail}" alt="${data[i].title} application photo"></img></a></div> <div class="paragraph"><h2>${data[i].title}</h2><p>${data[i].descr}</p></div>`
+        }
+        else{
+            document.getElementById("portfolio-content").innerHTML+= `<div id="project-${i}" class="portfolio-container content"><div class="paragraph"><h2>${data[i].title}</h2><p>${data[i].descr}</p></div><div class="thumbnail"><a href="${data[i].homepage}" target="_blank"><img class="" src="${data[i].thumbnail}" alt="${data[i].title} application photo"></img></a></div>`
+        }
     }
 }
 
