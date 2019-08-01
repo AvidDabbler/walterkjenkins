@@ -320,4 +320,8 @@ nav{
         display: flex;
         width: 100%;
     }
+    .thumbnail{
+        width: 45%;
+        padding-bottom: 30px;
+    }
   }
