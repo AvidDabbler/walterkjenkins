@@ -26,7 +26,16 @@
 
  /* CLASSES */
 
+ :root{
+     --light-blue: #427aa1;
+     --white: #ebf2fa;
+     --medium-blue: #1d3461;
+     --orange: #f06543;
+     --dark-blue: #0a122a
+ }
+
 .text{
+
     font-family: 'Rajdhani', sans-serif;
     text-decoration: none;
 }
@@ -48,11 +57,11 @@
     font-weight: 500;
 }
 .white{
-    background-color: white;
+    background-color: var(--white);
 }
 
 .blue{
-    background-color: #1d3461;
+    background-color: var(--medium-blue);
 }
 
 .blue h1{
@@ -61,7 +70,7 @@
     text-shadow: 5px 1px #0001;
 }
 .blue p{
-    color: #ebf2fa;
+    color: var(--white);
 }
 .port{
 
@@ -70,7 +79,7 @@
 body, html {
     margin: 0px;
     padding: 0px;
-    background-color: #0a122a;
+    background-color: var(--medium-blue);
     max-width: 100%;
     overflow-x: hidden;
     display: inline-block;
@@ -87,7 +96,7 @@ ul{
     list-style-type: none;
 }
 h2{
-    color: #427aa1;   
+    color: var(--light-blue);   
     font-size: 40px;
     text-shadow: 5px 1px #0001; 
 }
@@ -111,7 +120,7 @@ h2{
     font-size: 18px;
 }
 #navbar a{
-    color: #f06543;
+    color: var(--orange);
     text-decoration: none;
 }
 nav{
@@ -150,7 +159,7 @@ nav{
     margin-top: 1%;
     margin-bottom: 1%;
     display: inline-block;
-    color: #ebf2fa;
+    color: var(--white);
     text-align: center;
     font-size: 40px;
 }
@@ -159,7 +168,6 @@ nav{
     color: white;
 }
 #hr-left{
-
     display: inline-block;
     position: relative;
     float: left;
@@ -174,7 +182,7 @@ nav{
 }
 #hr-left hr, #hr-right hr{
     width: 90%;
-    color:#427aa1;
+    color:var(--light-blue);
 }
 
 
@@ -187,21 +195,18 @@ nav{
 }
 
 
-/* WORK SECTION */
-#work{
-    background-color: #1d3461;
-}
-
 /* SOFTWARE FAMILIARITY */
 #companies-container{
     width:100%;
     position: relative;
     display: inline-block;
 }
-.photo-container-square {
+.photo-container-square, .photo-container-rect {
     position: relative;
     display: inline-block;
     padding: 2%;
+}
+.photo-container-square {
     width: 10%;
     height: 10%;
     min-width: 200px;
@@ -209,9 +214,6 @@ nav{
     margin-top: 30px;
 }
 .photo-container-rect{
-    position: relative;
-    display: inline-block;
-    padding:2%;
     width: 30%;
     height: 30%;
     min-width: 400px;
@@ -222,11 +224,8 @@ nav{
     width: 100%;
     height: auto;
 }
-.square img{
-    height: 100%;
-    width: auto;
-}
-.rect img{
+
+.rect img, .square img{
     height: 100%;
     width: auto;
 }
@@ -241,7 +240,7 @@ nav{
     width: 100%;
     opacity: 0;
     transition: .5s ease;
-    background-color: #1d3461;
+    background-color: var(--dark-blue);
   }
   
 .photo-container-square:hover .overlay{
@@ -268,6 +267,7 @@ nav{
     padding:0;
     width: 90%;
     height: 5%;
+    max-width:1000px;
 }
 
 
@@ -277,14 +277,21 @@ nav{
     width: 100%;
     margin:5% 5% 5% 0;
 }
+
 .thumbnail{ 
     width:35%;
     display: inline-block;
+    padding: 40px;
 
 }
 .thumbnail img{
     width: 100%;
     vertical-align: middle;
+    border-radius: 10px;
+}
+.thumbnail img:hover{
+    box-shadow: 
+
 }
 .paragraph{
     text-align: center;
@@ -301,7 +308,7 @@ nav{
 .paragraph h2{
     margin:0;
     font-size: 30px;
-    color: #ebf2fa;
+    color: var(--white);
 }
 @media only screen and (max-width: 700px) {
     h1 {
