@@ -79,7 +79,7 @@
 body, html {
     margin: 0px;
     padding: 0px;
-    background-color: var(--medium-blue);
+    background-color: var(--dark-blue);
     max-width: 100%;
     overflow-x: hidden;
     display: inline-block;
@@ -273,9 +273,24 @@ nav{
 
 
 /* START OF PORTFOLIO */
+
+div#arrow {
+
+    font-family: "Arial";
+    background-color: var(white);
+    color: white;
+    font-size: 2em;
+
+    display: inline-block;
+  }
+  
+  div#arrow svg {
+    position: absolute;
+    top: 0px;
+    right: -30px;
+  }
 .portfolio-container{
     width: 100%;
-    margin:5% 5% 5% 0;
 }
 
 .thumbnail{ 
@@ -288,16 +303,19 @@ nav{
     width: 100%;
     vertical-align: middle;
     border-radius: 10px;
-}
-.thumbnail img:hover{
-    box-shadow: 
+    -webkit-box-shadow: 23px 26px 31px -9px var(--dark-blue);
+    -moz-box-shadow: 23px 26px 31px -9px var(--dark-blue);
+    box-shadow: 23px 26px 31px -9px var(--dark-blue);
 
 }
 .paragraph{
     text-align: center;
-    width:55%;
+    width:50%;
     display: inline-block;
     vertical-align: top;
+    margin-top: 5%;
+    padding:10px;
+
 }
 .paragraph h1{
     padding-bottom: 30px;
