@@ -53,9 +53,10 @@ const getData = async(i, repo, usr = user, splt = split)=>{
 
 // * DEFINED REPOS TO DISPLAY
 const setupArr = [
-    [`CensusViz`],
     [`backyard-chickens`],
-    [`dlm-soundboard`]
+    [`CensusViz`],
+    [`dlm-soundboard`],
+
 ];
 
 
@@ -69,6 +70,7 @@ const reposFunction = async () => {
 };
 
 
+
 // * GITHUB DATA RENDERING
 const portfGen= async()=>{ 
     await reposFunction();
@@ -76,10 +78,25 @@ const portfGen= async()=>{
     const data = await finalArr;
     for(let i=0; i < data.length; i++){
         if(i % 2 == 0){
-            document.getElementById("portfolio-content").innerHTML+= `<div id="project-${i}" class="portfolio-container content"><div class="thumbnail"><a href="${data[i].homepage}" target="_blank"><img class="" src="${data[i].thumbnail}" alt="${data[i].title} application photo"></img></a></div> <div class="paragraph"><h2>${data[i].title}</h2><p>${data[i].descr}</p></div>`
+            document.getElementById("portfolio-content").innerHTML+=
+             `<div id="project-${i}" class="portfolio-container content">
+                <div class="thumbnail"><a href="${data[i].homepage}" target="_blank">
+                <img class="" src="${data[i].thumbnail}" alt="${data[i].title} application photo"></img></a></div> 
+                <div class="paragraph">
+                    <h2>${data[i].title}</h2>
+                    <p>${data[i].descr}</p>
+                </div>
+            </div>`
         }
         else{
-            document.getElementById("portfolio-content").innerHTML+= `<div id="project-${i}" class="portfolio-container content"><div class="paragraph"><h2>${data[i].title}</h2><p>${data[i].descr}</p></div><div class="thumbnail"><a href="${data[i].homepage}" target="_blank"><img class="" src="${data[i].thumbnail}" alt="${data[i].title} application photo"></img></a></div>`
+            document.getElementById("portfolio-content").innerHTML+= 
+            `<div id="project-${i}" class="portfolio-container content">
+                <div class="paragraph">
+                    <h2>${data[i].title}</h2>
+                    <p>${data[i].descr}</p>
+                </div>
+                    <div class="thumbnail"><a href="${data[i].homepage}" target="_blank"><img class="" src="${data[i].thumbnail}" alt="${data[i].title} application photo"></img></a>
+                </div>`
         }
     }
 }
