@@ -31,27 +31,29 @@
 
     <!-- svg's created using google fonts to svg -->
     <!-- https://danmarshall.github.io/google-font-to-svg-path/ -->
-    <div id="hero">
-        <div id="heading">
+    <div class="hero">
+        <div class="heading">
             <object type="image/svg+xml" data="assets\images\walterjenkins3.svg">
                 <h1>Walter Jenkins</h1>
             </object>
         </div>
-        <div id="sub-heading">
+        <div class="sub-heading">
             <object type="image/svg+xml" data="assets\images\mapsdataprocesing.svg">
                 <h2>Maps and Data and Processing</h2>
             </object>
         </div>
     </div>
 
-    <div class="down" id="arrow">
-        <div id="hr-left">
-            <hr>
-        </div>
-            <a href="#about"> <i class="fa fa-chevron-circle-down"></i> </a>
-        <div id="hr-right">
-            <hr>
-        </div>
+    <div class="downarrow">
+        <svg class="line">
+            <line x1="25" y1="0" x2="8000" y2="0"/>
+        </svg>
+
+            <a href="#about"> <svg viewBox="0 0 32 32" class="icon icon-chevron-bottom" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></svg> </a>
+
+        <svg class="line">
+            <line x1="8000" y1="0" x2="25" y2="0"/>
+        </svg>
     </div>
 
     <!-- START OF ABOUT PARAGRAPH -->
@@ -60,11 +62,11 @@
         <div class="para-box" id="about-box">     
             <p>Walter has been working in transit and government technology since 2012. He has been a voice in government tech to encourage leadership that technology will bridge the gap between its workers and citizens. He belives that through good design barriers of all kinds can be broken down to better communicate projects and initiatives to citizens and elected officials. </p>
 
-            <p>Having experience in Transit Operations, Planning, and Information Technology, Walter has a unique background that comes with a well rounded understanding of the industry and pitfalls of transit technologies. He has a track record of being able to analyze and leverage data to preform analysis and build applications that have improved workflows and communication</p>
+            <!-- <p>Having experience in Transit Operations, Planning, and Information Technology, Walter has a unique background that comes with a well rounded understanding of the industry and pitfalls of transit technologies. He has a track record of being able to analyze and leverage data to preform analysis and build applications that have improved workflows and communication</p>
 
             <p>Starting in North Carolina Walter worked for a Transportation Authority as a Transportation Planner. He maintained a hand built GTFS feed using GIS and preformed performance and socioeconomic analysis. His methods looking at origin destination data led to a overhaul of the transit system that saw a direct increase in ridership and customer satisfaction.</p>
 
-            <p>Walter is available for contract work, consuliting, and projects and can bring his expertise to your projects.</p>
+            <p>Walter is available for contract work, consuliting, and projects and can bring his expertise to your projects.</p> -->
         </div>
     </div>
     <!-- START OF WORK SECTION -->
@@ -91,7 +93,7 @@
                     <img class="square image" src="assets\images\esri-logo.jpg" alt="arcgis pro"></img>
                     <div class="overlay">
                         <div class="overlay-text">
-                            <h3>Esri ArcGIS Pro</h3>
+                            <h2>Esri ArcGIS Pro</h2>
                         </div>
                     </div>
                 </a>
@@ -102,7 +104,7 @@
                     <img class="square image" src="assets\images\Survey123.png" alt="survey 123"></img>
                     <div class="overlay">
                             <div class="overlay-text">
-                                <h3>Esri Survey123</h3>
+                                <h2>Esri Survey123</h2>
                             </div>
                         </div>
                 </a>
@@ -113,7 +115,7 @@
                         <img class="square image" src="assets\images\WebAppBuilder.png" alt="web app builder"></img>
                         <div class="overlay">
                                 <div class="overlay-text">
-                                    <h3>Esri WebAppBuilder</h3>
+                                    <h2>Esri WebAppBuilder</h2>
                                 </div>
                             </div>
                     </a>
@@ -124,7 +126,7 @@
                         <img class="rect image" src="assets\images\remix.png" alt="remix"></img>
                         <div class="overlay">
                             <div class="overlay-text">
-                                    <h3>Remix</h3>
+                                    <h2>Remix</h2>
                                 </div>
                         </div>
                     </a>
@@ -136,7 +138,7 @@
                         <img class="rect image" src="assets\images\trapeze.jpg" alt="trapeze"></img>
                         <div class="overlay">
                                 <div class="overlay-text">
-                                    <h3>Trapeze</h3>
+                                    <h2>Trapeze</h2>
                                 </div>
                             </div>
                     </a>
