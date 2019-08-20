@@ -145,28 +145,27 @@ nav{
 
 /* TRANSITION */
 .downarrow{
-    height:40px;
+    width: 100%; 
+    height: 40px;
     margin-top: 1%;
     margin-bottom: 1%;
     color: var(--white);
     font-size: 40px;
     display: flex;
 }
-.downarrow a{
-    text-decoration: none;
-    color: white;
-}
 .line{
     stroke: var(--white);
     stroke-width: 2px;
-    height:30px;
+    height:2px;
     width: 40%;
     max-width: 500px;
+    margin:auto;
 }
 .icon{
-    height:50px;
+    height:45px;
     fill: var(--white);
     margin: auto;
+    align-content: center;
 }
 /* .hr{
     display: flex;
