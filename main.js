@@ -10,13 +10,10 @@ const finalArr= [];
 
 const getData = async(i, repo, usr = user, splt = split)=>{
     const gitLink = `https://api.github.com/repos/${usr}/${repo}`;
-    const fetchedData = fetch(gitLink).then( response=> 
-        response.json()).then(myJson=> ({
-            data:myJson
-        })
-        ).then(async res =>{
-            return res.data.description
-        });
+    const fetchedData = fetch(gitLink)
+        .then(response=> response.json())
+        .then(myJson=> ({data:myJson}))
+        .then(res =>{return res.data.description});
     const object = await fetchedData;
     const objArr = object.split(splt);
 
@@ -103,3 +100,4 @@ const portfGen= async()=>{
 
 
 portfGen();
+console.log(finalArr);
