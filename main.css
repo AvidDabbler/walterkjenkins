@@ -53,21 +53,13 @@
     padding-bottom: 30px;
     text-align: center;
 }
-.content h1{
-    font-weight: 500;
-}
+
 .white{
     background-color: var(--white);
 }
 
 .blue{
     background-color: var(--medium-blue);
-}
-
-.blue h1{
-    color: #427aa1;   
-    font-size: 75px;
-    text-shadow: 5px 1px #0001;
 }
 .blue p{
     color: var(--white);
@@ -85,20 +77,23 @@ body, html {
     display: inline-block;
     
 }
-h1{
-    color: #427aa1;   
-    font-size: 75px;
-    text-shadow: 5px 1px #0001;
-    padding: 0;
-    margin: 0;
+h1, h2, h3{
+    font-family: 'Permanent Marker', cursive;
+    color:var(--orange);
+    text-shadow: 5px 1px var(--light-blue);
+    width: 100%;
+    margin: auto;
+    text-align: center;
 }
-ul{
-    list-style-type: none;
+h1{
+    font-size: 60px;
+
 }
 h2{
-    color: var(--light-blue);   
     font-size: 40px;
-    text-shadow: 5px 1px #0001; 
+}
+nav{
+    height: 100%;
 }
 
 /* ID'S */
@@ -123,68 +118,61 @@ h2{
     color: var(--orange);
     text-decoration: none;
 }
-nav{
-    height: 100%;
-}
+/* ul{
+    list-style-type: none;
+} */
 
 /* TITLE */
 
-#hero{
+.hero{
     width: 100%;
     float: left;
     background: url("assets/images/nyc2.svg");
     background-size:cover;
-    padding-top:2.5%;
     padding-bottom:2%;
-}
-#heading{
     padding-top: 8%;
     padding-left: 2%;
-    width:97%;
     float: left;
     box-shadow: #0a122a
 }
-#sub-heading{
+.heading{
+    width: 97%;
+}
+.sub-heading{
     padding-left: 5%;
     margin-bottom:8%;
     width:70%;
     float: left;
 }
 
-
-
 /* TRANSITION */
-#arrow{
-    width: 100%;
+.downarrow{
+    width: 100%; 
+    height: 40px;
     margin-top: 1%;
     margin-bottom: 1%;
-    display: inline-block;
     color: var(--white);
-    text-align: center;
-    font-size: 40px;
+    display: inline-flex;
 }
-#arrow a{
-    text-decoration: none;
+.line{
+    stroke: var(--white);
+    stroke-width: 2px;
+    height:2px;
+    width: 40%;
+    max-width: 500px;
+    margin:auto;
+}
+.icon{
+    height:45px;
+    fill: var(--white);
+    margin: auto;
+    align-content: center;
+}
+/* .hr{
+    display: flex;
+    width: 45%;
     color: white;
-}
-#hr-left{
-    display: inline-block;
-    position: relative;
-    float: left;
-    width: 45%;
-}
-#hr-right{
-    display: inline-block;
-    position: relative;
-    float: right;
-    width: 45%;
-    size: 3px;
-}
-#hr-left hr, #hr-right hr{
-    width: 90%;
-    color:var(--light-blue);
-}
-
+} */
 
 /* ABOUT SECTION */
 #about-box{
@@ -196,11 +184,7 @@ nav{
 
 
 /* SOFTWARE FAMILIARITY */
-#companies-container{
-    width:100%;
-    position: relative;
-    display: inline-block;
-}
+
 .photo-container-square, .photo-container-rect {
     position: relative;
     display: inline-block;
@@ -252,7 +236,6 @@ nav{
 }
 
 .overlay-text {
-    color: #f06543;
     font-size: 20px;
     position: absolute;
     top: 50%;
@@ -260,7 +243,6 @@ nav{
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    text-align: center;
 }
 .portfolio-container {
     margin:0;
@@ -274,21 +256,6 @@ nav{
 
 /* START OF PORTFOLIO */
 
-div#arrow {
-
-    font-family: "Arial";
-    background-color: var(white);
-    color: white;
-    font-size: 2em;
-
-    display: inline-block;
-  }
-  
-  div#arrow svg {
-    position: absolute;
-    top: 0px;
-    right: -30px;
-  }
 .portfolio-container{
     width: 100%;
 }
@@ -349,4 +316,19 @@ div#arrow {
         width: 45%;
         padding-bottom: 30px;
     }
+  }
+
+.footer{
+    width: 100%;
+    margin:auto;
+    display: inline-flex;
+}
+.third{
+      width: 10%;
+      margin: 25% auto 25%;
+      display: inline-flex;
+
+  }
+  .column{
+
   }
