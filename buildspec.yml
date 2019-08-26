@@ -4,4 +4,4 @@ phases:
         runtime-versions:
             nodejs: 10
         commands:
-        - aws s3 sync https://github.com/AvidDabbler/walterkjenkins s3://www.walterkjenkins.com --delete
+        - aws s3 sync dist s3://www.walterkjenkins.com --delete
