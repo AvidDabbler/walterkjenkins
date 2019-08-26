@@ -1,4 +1,3 @@
-# walterkjenkins
-Walter Jenkins portfolio site
+# Walter Jenkins Portfolio Site
 
 
