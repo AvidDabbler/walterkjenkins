@@ -1,7 +1,0 @@
-version: 0.2
-phases:
-    install:
-        runtime-versions:
-            nodejs: 10
-        commands:
-        - aws s3 sync dist s3://www.walterkjenkins.com --delete
