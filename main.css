@@ -64,9 +64,7 @@
 .blue p{
     color: var(--white);
 }
-.port{
 
-}
 /* ELEMENTS */
 body, html {
     margin: 0px;
@@ -125,24 +123,29 @@ nav{
 /* TITLE */
 
 .hero{
-    width: 100%;
-    float: left;
-    background: url("assets/images/nyc2.svg");
-    background-size:cover;
-    padding-bottom:2%;
-    padding-top: 8%;
-    padding-left: 2%;
-    float: left;
-    box-shadow: #0a122a
+    max-height: 2px;
+    
+}
+.background-map svg{
+    position: relative;
+    max-height:5px;
+    display: flex;
+    overflow:hidden;
+    height:auto;
 }
 .heading{
+    position: absolute;
     width: 97%;
+    z-index:10;
+    padding-top:20%;
 }
 .sub-heading{
+    position: absolute;
     padding-left: 5%;
-    margin-bottom:8%;
     width:70%;
     float: left;
+    z-index:30;
+    padding-top:30%;
 }
 
 /* TRANSITION */
