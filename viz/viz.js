@@ -1,7 +1,4 @@
 
-//! DEFINING DEFAULTS
-
-
 const user = `AvidDabbler`; /* ENTER IN GITHUB USERNAME */
 const split = ` || `;/*  DEFAULT SEPARATOR */
 const finalArr= [];
@@ -49,7 +46,6 @@ const getData = async(i, repo, usr = user, splt = split)=>{
         };
 
 
-
 // * DEFINED REPOS TO DISPLAY
 const setupArr = [
     [`backyard-chickens`],
@@ -69,40 +65,13 @@ const reposFunction = async () => {
 };
 
 
+reposFunction();
 
-// * GITHUB DATA RENDERING
-const portfGen= async()=>{ 
-    await reposFunction();
-    const data = finalArr;
-    for(let i=0; i < data.length; i++){
-        if(i % 2 == 0){
-            document.getElementById("portfolio-content").innerHTML+=
-             `<div id="project-${i}" class="portfolio-container content">
-                <div class="thumbnail"><a href="${data[i].homepage}" target="_blank">
-                <img class="" src="${data[i].thumbnail}" alt="${data[i].title} application photo"></img></a></div> 
-                <div class="paragraph">
-                    <h2>${data[i].title}</h2>
-                    <p>${data[i].descr}</p>
-                </div>
-            </div>`
-        }
-        else{
-            document.getElementById("portfolio-content").innerHTML+= 
-            `<div id="project-${i}" class="portfolio-container content">
-                <div class="paragraph">
-                    <h2>${data[i].title}</h2>
-                    <p>${data[i].descr}</p>
-                </div>
-                    <div class="thumbnail"><a href="${data[i].homepage}" target="_blank"><img class="" src="${data[i].thumbnail}" alt="${data[i].title} application photo"></img></a>
-                </div>`
-        }
-    }
-}
-
-const buildSite = () =>{
-    portfGen()
-    .then(console.log('hello there'))
-}
-
-buildSite();
 console.log(finalArr);
+
+
+
+//todo: navigate to commit data
+//todo: pair repo with commit data
+//todo: build bar chart
+
