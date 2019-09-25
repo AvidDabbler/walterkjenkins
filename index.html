@@ -3,6 +3,7 @@
 <html>
 <head>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,700|Permanent+Marker|Rajdhani" rel="stylesheet"> 
+    <script src="https://d3js.org/d3.v5.min.js"></script>
     <link rel="stylesheet" type="text/css" media="screen" href="main.css">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,14 +17,14 @@
             <nav>  
                 <ul>
                     <li>
+                        <a data-value="blog" href="https://blog.walterkjenkins.com">Blog</a>
+                    </li>
+                    <li>
                         <a data-value="contact" href="#contact">Contact</a>
                     </li>  
                     <li>
                         <a data-value="portfolio"href="#portfolio">Portfolio</a>    
                     </li>
-                    <li>  
-                        <a data-value="work" href="#work">Work</a>
-                    </li>  
                     <li> 
                         <a data-value="about" href="#about">About</a>
                     </li> 
@@ -33,7 +34,7 @@
 
     <!-- svg's created using google fonts to svg -->
     <!-- https://danmarshall.github.io/google-font-to-svg-path/ -->
-    <div class="hero">
+
         <div class="heading">
             <object type="image/svg+xml" data="assets\images\walterjenkins3.svg">
                 <h1>Walter Jenkins</h1>
@@ -43,8 +44,14 @@
             <object type="image/svg+xml" data="assets\images\mapsdataprocesing.svg">
                 <h2>Maps and Data and Processing</h2>
             </object>
-        </div>
-    </div>
+        </div id="hero">
+
+                <object class="background-map" data="assets\images\nyc3.svg">
+                    <h1>map</h1>
+                </object>
+
+
+            </div>
 
     <div class="downarrow">
         <svg class="line">
@@ -74,18 +81,11 @@
     <!-- START OF WORK SECTION -->
     <div class="content blue" id="work" >
         <h1>Work</h1>
-        <div class="para-box" id="about-box">     
-
-            
-
-                <p>Being a transit technology professional with a background in Operations and Planning Walter has been spearheading projects since 2012. Whether the data is being pulled out of Trapeze or needs to be created Walter has a successful track record of getting a project done that has worked with peoples needs for the entire agency.</p>
-
-                <p>Working with ArcGIS Pro he has been able to build tools to process data for consumption by Trapeze and has pulled together models to translate road centerline data for consumption by Trapeze's MapMaker.</p>
-
-                <p>While working for Metro Saint Louis Walter was in charge of getting a way for the operations planners to be able to review 7,500 stops in a number of months. Given that there was a limited amount of time, Walter implemented an ArcGIS a workflow for the planners using ArcGIS Web App Builder that integrated Google Street View. This workflow kept the project running smoothly and allowed for the planners to analyze the stops from the office in a short amount of time.</p>
-
-                <p>Currently Walter is working on a project where he is building a Bus Stop Management System by combining Web App Builder and Survey123. This integration would create a customer to completion solution that would allow for the streamline of data collection from the customer that would route its way through the agency using the full suite of ArcGIS Workforce products. At the end of the project the process will run without the need for writing emails and a system of documentation will be established for the assessment of new stop locations and a detailed documentation of the construction of each bus stop install.</p>
-            </div>
+        <ul >
+            <li>Maps</li>
+            <li>Data</li>
+            <li>Processing</li>
+        </ul>
     </div>
     <div class="content white" id="companies">
         <h2>Software Familiarity</h2>
@@ -185,6 +185,8 @@
     </div>
 </div>
 
+</div>
+<div id ="d3">
 </div>
 
 </body>
