@@ -3,20 +3,20 @@
 
 
 const user = `AvidDabbler`; /* ENTER IN GITHUB USERNAME */
-const split = ` || `;/*  DEFAULT SEPARATOR */
+const usersplit = ` || `;/*  DEFAULT SEPARATOR */
 const finalArr = [];
 
 
 // ! FETCHING AND BUILDING GITHUB DATA OBJECTS
 
-const getData = async (i, repo, usr = user, splt = split) => {
+const getData = async (i, repo, usr = user, splt = usersplit) => {
     const gitLink = `https://api.github.com/repos/${usr}/${repo}`;
     const fetchedData = fetch(gitLink)
         .then(response => response.json())
         .then(myJson => ({ data: myJson }))
         .then(res => { return res.data.description });
-    const object = await fetchedData;
-    const objArr = object.split(splt);
+    const userObject = await fetchedData;
+    const objArr = userObject.split(splt);
 
     const statLink = `https://api.github.com/repos/${user}/${repo}/stats/participation`;
     const statData = fetch(statLink).then(response =>
