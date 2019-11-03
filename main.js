@@ -108,21 +108,21 @@ const dataViz = (data) => {
         .attr('width', w)
         .attr('height', h);
 
-    for(d of data){
+    data.map(d=>{
         svg.selectAll('circle')
             .data(d)
             .enter()
             .append('circle')
             .attr('cx', (d,i)=>(i*30)+30)
             .attr('cy', d=> (h-30)-(d*10))
-            .attr('r', 10)
-    }
+            .attr('r', 5)
+    });
 }
 
 const buildSite = async () => {
     await portfGen();
     const data = await finalArr.map(x=>x.stats);
-    console.log(data[0])
+    console.log(data)
     dataViz(data);
 }
 
