@@ -78,7 +78,6 @@ body, html {
 h1, h2, h3{
     font-family: 'Permanent Marker', cursive;
     color:var(--orange);
-
     width: 100%;
     margin: auto;
     text-align: center;
