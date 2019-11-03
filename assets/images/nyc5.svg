@@ -15,7 +15,7 @@
    viewBox="0 0 845.60527 430.60342"
    xml:space="preserve"
    id="svg12947"
-   sodipodi:docname="nyc4.svg"
+   sodipodi:docname="nyc5.svg"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
    width="845.60529"
    height="430.60342"><metadata
@@ -43,10 +43,10 @@
    inkscape:window-height="986"
    id="namedview12949"
    showgrid="false"
-   inkscape:zoom="1.281922"
-   inkscape:cx="134.1711"
-   inkscape:cy="329.58323"
-   inkscape:window-x="-11"
+   inkscape:zoom="0.90645574"
+   inkscape:cx="169.15714"
+   inkscape:cy="348.2869"
+   inkscape:window-x="2869"
    inkscape:window-y="-11"
    inkscape:window-maximized="1"
    inkscape:current-layer="svg12947" />
@@ -58,7 +58,7 @@
 	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
 	.st3{fill-rule:evenodd;clip-rule:evenodd;fill-opacity:0;}
 	.st4{fill-rule:evenodd;clip-rule:evenodd;}
-   .st0:hover,.st1:hover,.st2:hover,.st3:hover,.st4:hover{fill:#f06543;}
+   path:hover{fill:#f06543;}
 </style>
 <g
    id="Layer_1"
